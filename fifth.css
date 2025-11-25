@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Web/img/ONGJANGCOWEAPON.png');
+    color: white;
+}
+
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(20apx);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 3rem;
+    color: #00da02;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color: #00da02;
+    border-bottom: 3px solid #00da02;
+}
+
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #00da02;
+        border-bottom: 3px solid #00da02;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #00da02;
+    }
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+
+.contact {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.contact h2 {
+    padding: 60px 20px;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact-text {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+/* Contact info (phone + emails) */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 35px;
+    color: white;
+}
+
+.contact-info .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.contact-info i {
+    font-size: 22px;
+    color: #3aff00;
+}
+
+/* Social media links */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    color: black;
+}
+
+.contact-item.social {
+    background: #ffffff;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.contact-item.social i {
+    font-size: 28px;
+}
+
+/* Hover effect */
+.contact-item.social:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+}
+
+/* Social icon colors */
+.contact-item.social:nth-child(1) i { color: #1877F2; } /* Facebook */
+.contact-item.social:nth-child(2) i { color: #E4405F; } /* Instagram */
+.contact-item.social:nth-child(3) i { color: #13aff0; } /* ArtStation */
+
+/* Responsive */
+@media (max-width: 600px) {
+    .contact-item.social {
+        width: 100%;
+        justify-content: center;
+    }
+}
